@@ -1,10 +1,9 @@
 services:
   odoo:
-    image: {name}/odoo_v16
+    image: usernamee/odoo_v16:odoo_v16
     restart: unless-stopped
     environment:
       - PGHOST=db
-#      - PORT=5432
       - PGUSER=odoo
       - PGPASSWORD=odoo
     container_name: service_web
@@ -27,10 +26,10 @@ services:
         tag: "{{.Name}}"
 
   db:
-    image: {name}/pg_v14
+    image: username/odoo_v16:pg_v14
     restart: unless-stopped
     environment:
-#      - POSTGRES_DB=postgres
+      - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
     container_name: service_db
