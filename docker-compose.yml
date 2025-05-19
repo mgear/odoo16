@@ -1,6 +1,6 @@
 services:
   odoo:
-    image: usernamee/odoo_v16:odoo_v16
+    image: username/odoo_v16:odoo_v16
     restart: unless-stopped
     environment:
       - PGHOST=db
